@@ -6,9 +6,33 @@ app.controller('DashboardCtrl', ['$scope', function DashboardCtrl($scope) {
         "Further, users can optimize design to conserve both cost and " +
         "energy intensive materials such as cement and steel beside its compliance as per IS code for " +
         "structure integrity and safety. For more details click on app coverage.";
+
+    $scope.carousel = [
+        {
+            "img": "images/rcmason1.jpg",
+            "activeClass": "active"
+        },
+        {
+            "img": "images/Android_rcmason.png",
+            "activeClass": ""
+        },
+        {
+            "img": "images/iPhone_rcmason.png",
+            "activeClass": ""
+        },
+        {
+            "img": "images/iPhone_rcmasonB.png",
+            "activeClass": ""
+        },
+        {
+            "img" : "images/rcmason7.jpg",
+            "activeClass" : ""
+        }
+
+    ]
 }]);
 
-app.controller('HighlightsCtrl',['$scope', function HighlightsCtrl($scope) {
+app.controller('HighlightsCtrl', ['$scope', function HighlightsCtrl($scope) {
 
     $scope.descriptions = [
         "Users can select any grade for the concrete mix (M15, M20, M25, M30, M35 or M40) for the above element along with steel grade (MS or High strength steel).",
@@ -23,8 +47,8 @@ app.controller('HighlightsCtrl',['$scope', function HighlightsCtrl($scope) {
 
     $scope.rccStructureElements = [
         {
-            "name" : "Slab",
-            "subNav" : ["Simply Supported (Wall-rest)",
+            "name": "Slab",
+            "subNav": ["Simply Supported (Wall-rest)",
                 "Cantilever",
                 "Continuous"
             ]
@@ -34,52 +58,49 @@ app.controller('HighlightsCtrl',['$scope', function HighlightsCtrl($scope) {
             "subNav": []
         },
         {
-            "name" : "Flanged Beam",
-            "subNav" :
-                [
-                    "T beam",
-                    "L-Beam",
-                    "Isolated"
-                ]
+            "name": "Flanged Beam",
+            "subNav": [
+                "T beam",
+                "L-Beam",
+                "Isolated"
+            ]
         },
         {
             "name": "Column (Square/Rectangular)",
-            "subNav" : []
+            "subNav": []
         },
         {
-            "name":"Round Column",
-            "subNav" : []
+            "name": "Round Column",
+            "subNav": []
 
         },
         {
-           "name" : "Footing",
-            "subNav" : []
+            "name": "Footing",
+            "subNav": []
         },
         {
             "name": "Staircase-A (on Slab)",
-            "subNav" : []
+            "subNav": []
         },
         {
             "name": "Staircase-B (on Slab)",
-            "subNav" : []
+            "subNav": []
         }
     ];
-
-
 
 
 }]);
 
 app.controller("ContactCtrl", ['$scope', function ContactCtrl($scope) {
     $scope.contactInfo = {
-        "name" : "Kaup Shenoy Associates",
+        "name": "Kaup Shenoy Associates",
         "email": "kaupshenoyassociates@gmail.com",
-        "disclaimer" : "Please note that run time errors are unique and depends upon the type of device as well as the way users interact with the applications and often slip through and undetectable during normal testing procedures. Therefore it is very important to notify us on such issues giving details of your device model/make with screen shots or circumstances under which run time exceptions occurred. We will send our response as soon as possible along with possible updates fixing those run time exceptions. We can also work with you until issues are resolved. This is how we continuously improve with your help that benefits all users as well. We are committed for your complete satisfaction and your help and cooperation in this regard is highly appreciated."
+        "disclaimer": "Please note that run time errors are unique and depends upon the type of device as well as the way users interact with the applications and often slip through and undetectable during normal testing procedures. Therefore it is very important to notify us on such issues giving details of your device model/make with screen shots or circumstances under which run time exceptions occurred. We will send our response as soon as possible along with possible updates fixing those run time exceptions. We can also work with you until issues are resolved. This is how we continuously improve with your help that benefits all users as well. We are committed for your complete satisfaction and your help and cooperation in this regard is highly appreciated."
     };
 }]);
 
 app.config(['$routeProvider',
-    function($routeProvider) {
+    function ($routeProvider) {
         $routeProvider.
             when('/', {
                 templateUrl: 'partials/dashboard.html',

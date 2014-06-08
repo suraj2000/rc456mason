@@ -11,20 +11,8 @@
                         <li data-target="#carousel-example-generic" data-slide-to="4" class=""></li>
                     </ol>
                     <div class="carousel-inner">
-                        <div class="item active">
-                            <image src="images/rcmason1.jpg"/>
-                        </div>
-                        <div class="item">
-                            <image src="images/Android_rcmason.png"/>
-                        </div>
-                        <div class="item">
-                            <image src="images/iPhone_rcmason.png"/>
-                        </div>
-                        <div class="item">
-                            <image src="images/iPhone_rcmasonB.png"/>
-                        </div>
-                        <div class="item">
-                            <image src="images/rcmason7.jpg"/>
+                        <div ng-repeat="elem in carousel" class="item {{elem.activeClass}}">
+                            <image src="{{elem.img}}"/>
                         </div>
                     </div>
                     <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
