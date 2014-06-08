@@ -1,0 +1,16 @@
+<div class="container">
+    <h2>RCC Restructure Elements</h2>
+    <ol>
+        <li ng-repeat="element in rccStructureElements">
+            <b>{{element.name}}</b>
+            <ul ng-repeat="nav in element.subNav">
+                <b>{{nav}}</b>
+            </ul>
+        </li>
+    </ol>
+    <table class="table table-hover table-striped">
+        <tr ng-repeat="desc in descriptions">
+            <td>{{desc}}</td>
+        </tr>
+    </table>
+</div>
