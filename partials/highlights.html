@@ -1,16 +1,23 @@
 <div class="container">
     <h2>RCC Restructure Elements</h2>
-    <ol>
-        <li ng-repeat="element in rccStructureElements">
-            <b>{{element.name}}</b>
-            <ul ng-repeat="nav in element.subNav">
-                <b>{{nav}}</b>
-            </ul>
-        </li>
-    </ol>
-    <table class="table table-hover table-striped">
-        <tr ng-repeat="desc in descriptions">
-            <td>{{desc}}</td>
-        </tr>
-    </table>
+
+    <div class="panel-group collapse in" id="accordion{{$index}}" ng-repeat="element in rccStructureElements">
+        <div class="panel panel-default" >
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion{{$index}}" data-target="#collapse{{$index}}">
+                      {{$index+1}}.  {{element.name}}
+                        <ul ng-repeat="nav in element.subNav">
+                            <li>{{nav}}</li>
+                        </ul>
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse{{$index}}" class="panel-collapse collapse in">
+                <div class="panel-body">
+                      <p>{{element.content}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
